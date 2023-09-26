@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Câu 3</title>
+</head>
+<body>
+    Màu nền: <input type="text" id="MauNen"><br>
+    Màu chữ: <input type="text" id="MauChu"><br>
+    Tiêu đề: <input type="text" id="TieuDe"><br>
+    Trạng thái: <input type="text" id="TrangThai"><br>
+    <button onclick="changeStyles()">Thay Đổi</button>
+
+    <script>
+        function changeStyles() {
+            var mauNen = document.getElementById("MauNen").value;
+            var mauChu = document.getElementById("MauChu").value;
+            var tieuDe = document.getElementById("TieuDe").value;
+            var trangThai = document.getElementById("TrangThai").value;
+
+            document.body.style.backgroundColor = mauNen;
+            document.body.style.color = mauChu;
+            document.title = tieuDe;
+            window.status = trangThai;
+        }
+    </script>
+</body>
+</html>

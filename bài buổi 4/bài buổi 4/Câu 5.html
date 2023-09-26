@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Câu 5</title>
+</head>
+<body>
+    <h1>Giai Phuong Trinh Bac 2</h1>
+    <label for="a">a:</label>
+    <input type="number" id="a"><br>
+    <label for="b">b:</label>
+    <input type="number" id="b"><br>
+    <label for="c">c:</label>
+    <input type="number" id="c"><br>
+    <button onclick="solveQuadratic()">Giai</button>
+    <p id="result"></p>
+
+    <script>
+        function solveQuadratic() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+
+            var delta = b * b - 4 * a * c;
+            if (delta < 0) {
+                document.getElementById("result").innerHTML = "Phuong trinh vo nghiem";
+            } else if (delta == 0) {
+                var x = -b / (2 * a);
+                document.getElementById("result").innerHTML = "Nghiem kep: x = " + x;
+            } else {
+                var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                document.getElementById("result").innerHTML = "Nghiem 1: x1 = " + x1 + ", Nghiem 2: x2 = " + x2;
+            }
+        }
+    </script>
+</body>
+</html>

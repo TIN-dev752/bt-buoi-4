@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Câu 2</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeColors()">Change Colors</button>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    <div class="box" id="box5"></div>
+    <div class="box" id="box6"></div>
+    <div class="box" id="box7"></div>
+    <div class="box" id="box8"></div>
+    <div class="box" id="box9"></div>
+    <div class="box" id="box10"></div>
+
+    <script>
+        function changeColors() {
+            var boxes = document.querySelectorAll(".box");
+
+            for (var i = 0; i < boxes.length; i++) {
+                if (i % 2 === 0) {
+                    boxes[i].style.backgroundColor = "red";
+                } else {
+                    boxes[i].style.backgroundColor = "green";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
